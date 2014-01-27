@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="launcher.button.startGame">Начать игру</string>
+    <string name="launcher.button.openAccount">Личный кабинет</string>
+    <string name="launcher.button.openStats">Доска почета</string>
+    <string name="launcher.button.connect">Попробовать ещё раз</string>
+    <string name="launcher.title">Города Online</string>
+    <string name="launcher.text.internet_connection">Для работы игры \"Города Online\", необходимо соединение с Интернет.\nНастройте Интернет соединение и попробуй ещё раз.</string>
+    <string name="launcher.hint.internet_connection">Настройте Интернет соединение и попробуй ещё раз.</string>
+
+    <string name="authorization.text">Добро пожаловать в \"Города Online\"!\nВведите, пожалуйста, логин и пароль для входа или регистрации.</string>
+    <string name="authorization.hint.insert_login">Логин</string>
+    <string name="authorization.hint.insert_password">Пароль</string>
+    <string name="authorization.button.login_or_registration">Вход или Регистрация</string>
+    <string name="authorization.hint.login_empty">Введите логин</string>
+    <string name="authorization.hint.password_empty">Введите пароль</string>
+    <string name="authorization.hint.password_short">Пароль должен содержать не менее 5 символов</string>
+    <string name="authorization.hint.password_incorrect">Неверный пароль</string>
+    <string name="authorization.progress.login_or_registration">Выполняется вход или регистрация</string>
+    <string name="authorization.check.save_password">Сохранить пароль</string>
+    <string name="authorization.dialog.exit.title">Выход из \"Города Online\"</string>
+    <string name="authorization.dialog.exit.text">Вы действительно хотите выйти?</string>
+    <string name="authorization.dialog.exit.yes">Да</string>
+    <string name="authorization.dialog.exit.no">Нет</string>
+
+    <string name="start_game.text">Приветствуем %1$s!</string>
+    <string name="start_game.progress.request_user_data">Загрузка данных пользователя</string>
+    <string name="start_game.progress.request_online_data">Загрузка игровых данных</string>
+
+    <string name="app_name">Города Online</string>
+    <string name="label_games">Количество игр</string>
+    <string name="label_players">Количество игроков</string>
+    <string name="label_score">Очки:</string>
+    <string name="current_game">Текущая игра:</string>
+    <string name="add_city">Добавить город</string>
+    <string name="hint_add_city">Название города</string>
+    <string name="hint_write_city_name">Необходимо ввести название города</string>
+    <string name="hint_city_not_exist">Извините, но города %1$s не существует</string>
+    <string name="hint_already_called">Извините, но город %1$s уже назывался</string>
+    <string name="hint_city_added">Город %1$s успешно добавлен</string>
+    <string name="hint_load_users_count">Загрузка количества пользователей</string>
+    <string name="hint_connect_to_server">Подключение к серверу</string>
+    <string name="hint_request_user_data">Загрузка пользовательских данных</string>
+    <string name="hint_connect_to_game">Подключение к игре</string>
+    <string name="hint_request_game_data">Загруза игровых данных</string>
+</resources>

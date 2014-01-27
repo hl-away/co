@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="12pt"
+              android:gravity="center_horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_main00" android:baselineAligned="true">
+    <ImageView
+            android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/launcher.title"/>
+    <TextView
+            android:paddingBottom="3dp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="10pt"
+            android:text="@string/authorization.text"/>
+    <EditText
+            android:id="@+id/authorizationLogin"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="@string/authorization.hint.insert_login"
+            android:maxWidth="250dp"
+            android:minWidth="250dp"
+            android:inputType="textAutoCorrect|text"
+            android:singleLine="true"/>
+    <EditText
+            android:id="@+id/authorizationPassword"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="@string/authorization.hint.insert_password"
+            android:maxWidth="250dp"
+            android:minWidth="250dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:imeOptions="actionDone"/>
+    <Button
+            android:id="@+id/authorizationLoginBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="9pt"
+            android:text="@string/authorization.button.login_or_registration"/>
+    <CheckBox
+            android:id="@+id/authorizationSavePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/authorization.check.save_password" />
+</LinearLayout>

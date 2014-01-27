@@ -1,0 +1,24 @@
+You're hosted on eu5.org server. Account Manager is located at http://eu5org.freewebhostingarea.com/.
+Username:
+co-game.eu5.org
+Password:
+hl-away13311331
+If you have accounts created on more than one server, see http://www.freewebhostingarea.com/members/.
+ 
+Some scripts require server path. Yours is /home/vhosts/co-game.eu5.org.
+
+Your Personal FTP Information:
+FTP Server/Host:
+
+eu5.org
+
+FTP Login/Username:
+
+co-game.eu5.org
+
+FTP PassWord:
+
+hl-away13311331
+
+MySQL Main Database name: 744542 
+MySQL Database username: 744542 

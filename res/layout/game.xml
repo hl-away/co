@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/map"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              map:uiZoomControls="false"
+              map:uiZoomGestures="false"
+              map:uiRotateGestures="false"
+              tools:ignore="MissingPrefix">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:paddingLeft="5dp"
+                      android:paddingRight="5dp"
+                      android:gravity="fill_horizontal"
+                      android:orientation="horizontal">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:orientation="vertical"
+                          android:layout_width="130dp"
+                          android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:text="@string/current_game"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"/>
+                <ListView android:id="@+id/gameUsers"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:divider="@android:color/darker_gray"/>
+            </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:orientation="horizontal"
+                          android:gravity="bottom"
+                          android:layout_gravity="center"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent">
+                <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:hint="@string/hint_add_city"
+                        android:maxWidth="210dp"
+                        android:id="@+id/cityName"
+                        android:inputType="textAutoCorrect|textCapWords"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"/>
+                <Button
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/addMap"
+                        android:text="@string/add_city"/>
+            </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:orientation="vertical"
+                          android:gravity="bottom"
+                          android:paddingBottom="5dp"
+                          android:layout_width="fill_parent"
+                          android:layout_height="match_parent">
+                <ListView android:id="@+id/gameCities"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:divider="@android:color/transparent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </fragment>
+</LinearLayout>
+
