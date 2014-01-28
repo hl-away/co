@@ -27,8 +27,6 @@ public class StartGameActivity extends MainActivity {
         setContentView(R.layout.start_game);
 
         user = UserUtil.getUserFromDB();
-        UserUtil.requestUserData(this, getString(R.string.start_game_progress_request_user_data), user.getToken());
-        GameUtil.requestOnlineData(this, getString(R.string.start_game_progress_request_online_data));
 
         TextView helloText = (TextView) findViewById(R.id.startGameText);
         helloText.setText(String.format(getString(R.string.start_game_text), user.getLogin()));
@@ -37,6 +35,17 @@ public class StartGameActivity extends MainActivity {
         openStarsButton = (Button) findViewById(R.id.openStarsButton);
         openAccountButton = (Button) findViewById(R.id.openAccountButton);
         addListenerToButtons();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        UserUtil.requestUserData(this, getString(R.string.start_game_progress_request_user_data), user.getToken());
+        GameUtil.requestOnlineData(this, getString(R.string.start_game_progress_request_online_data));
+    }
+
+    public void onBackPressed(){
+        processBackButton();
     }
 
     public void initUserData(String result) {

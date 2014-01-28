@@ -8,6 +8,7 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -129,6 +130,8 @@ public class CoActivity extends MainActivity {
             markerOptions.snippet(CityUtil.getCitySnippet(currentCity, previousCity));
         }
         Marker marker = map.addMarker(markerOptions);
+        //marker.setAlpha(0.8f);
+        marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.pin));
         marker.showInfoWindow();
 
         CameraUpdate center = CameraUpdateFactory.newLatLng(currentCity.getPosition());

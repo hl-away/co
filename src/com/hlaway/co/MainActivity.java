@@ -1,5 +1,7 @@
 package com.hlaway.co;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
@@ -23,5 +25,26 @@ public class MainActivity extends FragmentActivity {
         startActivity(intent);
         printMessage(getString(R.string.launcher_hint_internet_connection));
         finish();
+    }
+
+    protected void processBackButton() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.authorization_dialog_exit_title))
+                .setMessage(getString(R.string.authorization_dialog_exit_text))
+                .setCancelable(false)
+                .setPositiveButton(getString(R.string.authorization_dialog_exit_yes),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                finish();
+                            }
+                        })
+                .setNegativeButton(getString(R.string.authorization_dialog_exit_no),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

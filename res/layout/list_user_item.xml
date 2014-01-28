@@ -8,7 +8,7 @@
             android:text="userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12dp"
+            android:textSize="15dp"
             android:textColor="@android:color/black"/>
     <TextView
             android:id="@+id/userScore"
@@ -16,6 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
-            android:textSize="10dp"
+            android:textSize="13dp"
             android:textColor="@android:color/darker_gray"/>
 </LinearLayout>
