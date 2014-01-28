@@ -19,7 +19,7 @@ if($user_id > 0) {
         $game_id = mysql_result($r,0,0);
     } else {
         //try to find game with vacant user place
-        $r = mysql_query("SELECT GAME.id FROM GAME WHERE GAME.status = 0 AND GAME.max_users < (SELECT COUNT(*) FROM GAME_USER WHERE GAME_USER.game_id = GAME.id AND GAME_USER.user_id != $user_id) LIMIT 1");
+        $r = mysql_query("SELECT GAME.id FROM GAME WHERE GAME.status = 0 AND GAME.max_users > (SELECT COUNT(*) FROM GAME_USER WHERE GAME_USER.game_id = GAME.id AND GAME_USER.user_id != $user_id) LIMIT 1");
         if( mysql_num_rows($r) > 0) {
             $game_id = mysql_result($r,0,0);
             //add current user to game
