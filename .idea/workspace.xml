@@ -62,7 +62,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1859ebf-b8e0-4775-9a0b-082338e3a3bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cities Online.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -182,10 +182,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="9" selection-start="280" selection-end="280" vertical-scroll-proportion="0.6091954" vertical-offset="109" max-vertical-offset="544">
+            <state line="24" column="18" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="544">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="49" selection-start="506" selection-end="506" vertical-scroll-proportion="0.4028436" vertical-offset="34" max-vertical-offset="18938">
               <folding />
             </state>
           </provider>
@@ -204,15 +213,6 @@
         <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="101" column="33" selection-start="3837" selection-end="3837" vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="1921">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MiscUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/MiscUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -278,6 +278,7 @@
         <option value="$PROJECT_DIR$/webserver/get_game.php" />
         <option value="$PROJECT_DIR$/res/layout/game.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -343,10 +344,6 @@
               <option name="myItemId" value="Cities Online" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -355,88 +352,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cities Online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cities Online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cities Online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cities Online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cities Online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -718,11 +633,15 @@
       <created>1391030572349</created>
       <updated>1391030572349</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="change ignored list">
+      <created>1391030674612</created>
+      <updated>1391030674612</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.75085324" order="3" side_tool="false" content_ui="tabs" />
@@ -785,11 +704,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webserver/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="731" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webserver/cities_count.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="27" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204" />
@@ -995,11 +909,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="53" selection-start="4604" selection-end="4604" vertical-scroll-proportion="0.0" vertical-offset="1639" max-vertical-offset="3145">
           <folding>
-            <element signature="e#1432#1472#0" expanded="true" />
-            <element signature="e#3308#3348#0" expanded="true" />
-            <element signature="e#5560#5599#0" expanded="true" />
-            <element signature="e#5752#5807#0" expanded="true" />
-            <element signature="e#6139#6190#0" expanded="true" />
+            <element signature="e#1432#1472#0" expanded="false" />
+            <element signature="e#3308#3348#0" expanded="false" />
+            <element signature="e#5560#5599#0" expanded="false" />
+            <element signature="e#5752#5807#0" expanded="false" />
+            <element signature="e#6139#6190#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1103,7 +1017,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="9" selection-start="280" selection-end="280" vertical-scroll-proportion="0.6091954" vertical-offset="109" max-vertical-offset="544">
+        <state line="24" column="18" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="49" selection-start="506" selection-end="506" vertical-scroll-proportion="0.4028436" vertical-offset="34" max-vertical-offset="18938">
           <folding />
         </state>
       </provider>
