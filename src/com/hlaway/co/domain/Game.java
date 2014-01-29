@@ -13,12 +13,12 @@ import java.util.List;
 public class Game implements Parcelable {
     private long id;
     private ArrayList<User> users;
-    private ArrayList<City> cities;
+    private ArrayList<GameCity> cities;
     private int newCitiesCount;
 
     public Game() {
         users = new ArrayList<User>();
-        cities = new ArrayList<City>();
+        cities = new ArrayList<GameCity>();
     }
 
     public long getId() {
@@ -37,15 +37,15 @@ public class Game implements Parcelable {
         this.users = users;
     }
 
-    public List<City> getCities() {
+    public List<GameCity> getCities() {
         return cities;
     }
 
-    public void setCities(ArrayList<City> cities) {
+    public void setCities(ArrayList<GameCity> cities) {
         this.cities = cities;
     }
 
-    public void addCity(City city) {
+    public void addCity(GameCity city) {
         cities.add(city);
     }
 

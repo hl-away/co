@@ -3,10 +3,7 @@ package com.hlaway.co.util;
 import android.app.ProgressDialog;
 import com.hlaway.co.CoActivity;
 import com.hlaway.co.StartGameActivity;
-import com.hlaway.co.domain.City;
-import com.hlaway.co.domain.Game;
-import com.hlaway.co.domain.OnlineData;
-import com.hlaway.co.domain.User;
+import com.hlaway.co.domain.*;
 import com.hlaway.co.network.HttpClient;
 
 /**
@@ -56,7 +53,7 @@ public class GameUtil {
                 user.setScore(Long.valueOf(valueArray[3]));
                 game.addUser(user);
             } else if(valueArray[0].equals("c")) {
-                City city = new City();
+                GameCity city = new GameCity();
                 city.setId(Long.valueOf(valueArray[1]));
                 city.setName(valueArray[2]);
                 city.setLatitude(Double.valueOf(valueArray[3]));

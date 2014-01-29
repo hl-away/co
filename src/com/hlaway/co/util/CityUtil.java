@@ -9,6 +9,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.hlaway.co.CoActivity;
 import com.hlaway.co.db.DatabaseManager;
 import com.hlaway.co.domain.City;
+import com.hlaway.co.domain.GameCity;
 import com.hlaway.co.network.HttpClient;
 
 import java.io.IOException;
@@ -84,14 +85,14 @@ public class CityUtil {
         httpClient.execute(getGetCityUrl() + params);
     }
 
-    public static City parseCityFromStr(String str) {
+    public static GameCity parseCityFromStr(String str) {
         String[] cityArray = str.split(NetworkUtil.SEPARATOR);
         if(cityArray.length != 4) {
             return null;
         }
 
         try {
-            City city = new City();
+            GameCity city = new GameCity();
             city.setServerID(Long.valueOf(cityArray[0]));
             city.setName(cityArray[1]);
             city.setLatitude(Double.valueOf(cityArray[2]));

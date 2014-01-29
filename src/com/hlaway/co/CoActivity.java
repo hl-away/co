@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.hlaway.co.db.DatabaseManager;
 import com.hlaway.co.domain.City;
 import com.hlaway.co.domain.Game;
+import com.hlaway.co.domain.GameCity;
 import com.hlaway.co.domain.User;
 import com.hlaway.co.util.*;
 
@@ -89,7 +90,7 @@ public class CoActivity extends MainActivity {
                     if (CityUtil.isEmpty(city)) {
                         getCityFromServer(cityName);
                     } else {
-                        addCityToGame(city);
+                        addCityToGame((GameCity) city);
                     }
                 } else {
                     printMessage(getString(R.string.hint_write_city_name));
@@ -142,22 +143,24 @@ public class CoActivity extends MainActivity {
     }
 
     public void setCityFromServer(String cityStr) {
-        City city = CityUtil.parseCityFromStr(cityStr);
-        if (city != null) {
-            if(city.getLatitude() == 0 && city.getLongitude() == 0) {
-                city = CityUtil.initCity(city.getName());
+        GameCity gameCity = CityUtil.parseCityFromStr(cityStr);
+        if (gameCity != null) {
+            if(gameCity.getLatitude() == 0 && gameCity.getLongitude() == 0) {
+                City city = CityUtil.initCity(gameCity.getName());
                 CityUtil.saveCityInServer(city);
-                game.incrementNewCitiesCount();
+                CityUtil.saveCityInDB(city);
+                gameCity.setLatitude(city.getLatitude());
+                gameCity.setLongitude(city.getLongitude());
+                gameCity.setFoundCity(true);
             }
-            CityUtil.saveCityInDB(city);
-            addCityToGame(city);
+            addCityToGame(gameCity);
         } else {
             String cityName = StringUtil.normCityName(String.valueOf(cityNameEdit.getText()));
             printMessage(String.format(getString(R.string.hint_city_not_exist), cityName));
         }
     }
 
-    private boolean addCityToGame(City city) {
+    private boolean addCityToGame(GameCity city) {
         if( GameUtil.isCityInGame(game, city) ) {
             printMessage(getString(R.string.hint_already_called, city.getName()));
         } else {
