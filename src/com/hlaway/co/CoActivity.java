@@ -90,7 +90,7 @@ public class CoActivity extends MainActivity {
                     if (CityUtil.isEmpty(city)) {
                         getCityFromServer(cityName);
                     } else {
-                        addCityToGame((GameCity) city);
+                        addCityToGame(new GameCity(city));
                     }
                 } else {
                     printMessage(getString(R.string.hint_write_city_name));
@@ -151,7 +151,6 @@ public class CoActivity extends MainActivity {
                 CityUtil.saveCityInDB(city);
                 gameCity.setLatitude(city.getLatitude());
                 gameCity.setLongitude(city.getLongitude());
-                gameCity.setFoundCity(true);
             }
             addCityToGame(gameCity);
         } else {
@@ -192,11 +191,11 @@ public class CoActivity extends MainActivity {
 
     private void showCities() {
         ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
-        for (City city: game.getCities()) {
+        for (GameCity city: game.getCities()) {
             data.add(city.getViewMap());
         }
-        int[] ids = { R.id.cityName };
-        SimpleAdapter adapter = new SimpleAdapter(this, data, R.layout.list_city_item, City.getParametersList(), ids);
+        int[] ids = { R.id.cityName, R.id.cityIcon };
+        SimpleAdapter adapter = new SimpleAdapter(this, data, R.layout.list_city_item, GameCity.getParametersList(), ids);
 
         ListView lv = (ListView) findViewById(R.id.gameCities);
         lv.setAdapter(adapter);

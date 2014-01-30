@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
+              android:paddingLeft="2dp"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content">
     <TextView
@@ -11,10 +12,8 @@
             android:textSize="15dp"
             android:textColor="#020065"/>
     <ImageView
-            android:id="@+id/cityFoundStar"
+            android:id="@+id/cityIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/star"
-            android:contentDescription="Star"
-            android:visibility="gone"/>
+            android:contentDescription="@string/list_city_item.city_icon"/>
 </LinearLayout>

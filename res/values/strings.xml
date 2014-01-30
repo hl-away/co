@@ -31,7 +31,8 @@
     <string name="label_games">Количество игр</string>
     <string name="label_players">Количество игроков</string>
     <string name="label_score">Очки:</string>
-    <string name="current_game">Текущая игра:</string>
+    <string name="current_game.users">Игроки:</string>
+    <string name="current_game.cities">Города:</string>
     <string name="add_city">Добавить город</string>
     <string name="hint_add_city">Название города</string>
     <string name="hint_write_city_name">Необходимо ввести название города</string>
@@ -43,4 +44,5 @@
     <string name="hint_request_user_data">Загрузка пользовательских данных</string>
     <string name="hint_connect_to_game">Подключение к игре</string>
     <string name="hint_request_game_data">Загруза игровых данных</string>
+    <string name="list_city_item.city_icon">Star</string>
 </resources>
