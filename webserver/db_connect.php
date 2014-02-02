@@ -1,10 +1,10 @@
 <?php
 $host = "localhost";
-$user = "362420";
-$pass = "hl-away13311331";
-$db = "362420";
+$user = "hlaway_co";
+$pass = "dX93deLrLe";
+$db = "hlaway_co";
 
 $id = mysql_connect($host,$user,$pass);
-mysql_select_db($db);   
+mysql_select_db($db);
 mysql_query("SET NAMES utf8",$id);
 ?>
