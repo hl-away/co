@@ -1,5 +1,7 @@
 package com.hlaway.co.domain;
 
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.hlaway.co.R;
 
 import java.util.Map;
@@ -10,7 +12,8 @@ import java.util.Map;
  */
 public class GameCity extends City {
     private long userID;
-    private boolean foundCity;
+    private boolean newCity;
+    private Marker marker;
 
     public static final String COLUMN_ICON = "icon";
 
@@ -31,18 +34,26 @@ public class GameCity extends City {
         this.userID = userID;
     }
 
-    public boolean isFoundCity() {
-        return foundCity;
+    public boolean isNewCity() {
+        return newCity;
     }
 
-    public void setFoundCity(boolean foundCity) {
-        this.foundCity = foundCity;
+    public void setNewCity(boolean newCity) {
+        this.newCity = newCity;
+    }
+
+    public void setMarker(Marker marker) {
+        this.marker = marker;
+    }
+
+    public Marker getMarker() {
+        return marker;
     }
 
     public Map<String, Object> getViewMap() {
         Map<String, Object> parametersMap = super.getViewMap();
         int icon = R.drawable.t;
-        if(foundCity) {
+        if(newCity) {
             icon = R.drawable.star;
         }
         parametersMap.put( COLUMN_ICON, icon );

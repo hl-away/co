@@ -65,12 +65,16 @@ public class GameUtil {
     }
 
     public static boolean isCityInGame(Game game, City city) {
-        for( City gameCity: game.getCities() ) {
-            if( gameCity.getName().equalsIgnoreCase(city.getName()) ) {
-                return true;
+        return getCityInGamePosition(game, city) != -1;
+    }
+
+    public static int getCityInGamePosition(Game game, City city) {
+        for( int i = 0; i < game.getCities().size(); i++ ) {
+            if( game.getCities().get(i).getName().equalsIgnoreCase(city.getName()) ) {
+                return i;
             }
         }
-        return false;
+        return -1;
     }
 
     public static void addCityToGame(City city, Game game, User user) {

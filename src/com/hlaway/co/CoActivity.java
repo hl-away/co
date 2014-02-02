@@ -24,6 +24,7 @@ import java.util.Map;
 
 public class CoActivity extends MainActivity {
     private GoogleMap map;
+    private TextView gameCitiesTitle;
     private EditText cityNameEdit;
     private Button addCityButton;
     private Game game;
@@ -46,7 +47,9 @@ public class CoActivity extends MainActivity {
         GameUtil.requestGame(this, getString(R.string.hint_connect_to_game), user);
 
         map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        map.animateCamera( CameraUpdateFactory.zoomTo( 3.0f ) );
         cityNameEdit = (EditText) findViewById(R.id.cityName);
+        gameCitiesTitle = (TextView) findViewById(R.id.gameCitiesTitle);
         addCityButton = (Button) findViewById(R.id.addMap);
 
         addListenerOnButton();
@@ -114,7 +117,7 @@ public class CoActivity extends MainActivity {
     }
 
     private void showCity(int currentCityId) {
-        City currentCity = game.getCities().get(currentCityId);
+        GameCity currentCity = game.getCities().get(currentCityId);
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(currentCity.getPosition())
                 .title(currentCity.getName());
@@ -124,22 +127,27 @@ public class CoActivity extends MainActivity {
             map.addPolyline(new PolylineOptions()
                     .add(currentCity.getPosition(), previousCity.getPosition())
                     .width(2)
-                    .color(Color.argb(255, 0, 0, 255)));
+                    .color(Color.argb(100, 0, 0, 255)));
             /*if(alpha + alphaStep < 255) {
                 alpha += 15;
             }*/
             markerOptions.snippet(CityUtil.getCitySnippet(currentCity, previousCity));
         }
         Marker marker = map.addMarker(markerOptions);
-        //marker.setAlpha(0.8f);
         marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.pin));
-        marker.showInfoWindow();
+        currentCity.setMarker(marker);
+        showCityOnMap(currentCity);
+        //marker.setAlpha(0.8f);
 
-        CameraUpdate center = CameraUpdateFactory.newLatLng(currentCity.getPosition());
-        map.moveCamera(center);
         cityNameEdit.setText(StringUtil.getLastLetter(currentCity.getName()).toUpperCase());
-
+        gameCitiesTitle.setText(getString(R.string.current_game_cities, game.getCities().size()));
         showCities();
+    }
+
+    private void showCityOnMap(GameCity city) {
+        CameraUpdate center = CameraUpdateFactory.newLatLng(city.getPosition());
+        map.moveCamera(center);
+        city.getMarker().showInfoWindow();
     }
 
     public void setCityFromServer(String cityStr) {
@@ -151,6 +159,7 @@ public class CoActivity extends MainActivity {
                 CityUtil.saveCityInDB(city);
                 gameCity.setLatitude(city.getLatitude());
                 gameCity.setLongitude(city.getLongitude());
+                gameCity.setNewCity(true);
             }
             addCityToGame(gameCity);
         } else {
@@ -160,8 +169,9 @@ public class CoActivity extends MainActivity {
     }
 
     private boolean addCityToGame(GameCity city) {
-        if( GameUtil.isCityInGame(game, city) ) {
-            printMessage(getString(R.string.hint_already_called, city.getName()));
+        int positionInGame = GameUtil.getCityInGamePosition(game, city);
+        if( positionInGame != -1 ) {
+            printMessage(getString(R.string.hint_already_called, city.getName(), positionInGame));
         } else {
             /*City lastCity = game.getLastCity();
             if(lastCity != null) {
@@ -187,6 +197,7 @@ public class CoActivity extends MainActivity {
 
         ListView lv = (ListView) findViewById(R.id.gameUsers);
         lv.setAdapter( adapter );
+        lv.setClickable(false);
     }
 
     private void showCities() {
@@ -197,7 +208,14 @@ public class CoActivity extends MainActivity {
         int[] ids = { R.id.cityName, R.id.cityIcon };
         SimpleAdapter adapter = new SimpleAdapter(this, data, R.layout.list_city_item, GameCity.getParametersList(), ids);
 
-        ListView lv = (ListView) findViewById(R.id.gameCities);
-        lv.setAdapter(adapter);
+        ListView citiesListView = (ListView) findViewById(R.id.gameCities);
+        citiesListView.setAdapter(adapter);
+        citiesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+                GameCity gameCity = game.getCities().get(position);
+                showCityOnMap(gameCity);
+            }
+        });
     }
 }

@@ -61,25 +61,13 @@
     </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1859ebf-b8e0-4775-9a0b-082338e3a3bb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pin.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/star.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/t.png" />
+    <list default="true" id="a1859ebf-b8e0-4775-9a0b-082338e3a3bb" name="Default" comment="improve lists&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java" afterPath="$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java" afterPath="$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/authorization.xml" afterPath="$PROJECT_DIR$/res/layout/authorization.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java" afterPath="$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/game.xml" afterPath="$PROJECT_DIR$/res/layout/game.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/launcher.xml" afterPath="$PROJECT_DIR$/res/layout/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/list_city_item.xml" afterPath="$PROJECT_DIR$/res/layout/list_city_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/list_user_item.xml" afterPath="$PROJECT_DIR$/res/layout/list_user_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/start_game.xml" afterPath="$PROJECT_DIR$/res/layout/start_game.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/bg_main.jpg" afterPath="$PROJECT_DIR$/images/bg_main.jpg" />
-      <change type="MOVED" beforePath="E:\ANDROID\co.git\res\drawable\bg_main0.jpg" afterPath="$PROJECT_DIR$/images/bg_main0.jpg" />
-      <change type="MOVED" beforePath="E:\ANDROID\co.git\res\drawable\bg_main00.jpg" afterPath="$PROJECT_DIR$/res/drawable/bg_main.jpg" />
-      <change type="MOVED" beforePath="E:\ANDROID\co.git\res\drawable\bg_main1.jpg" afterPath="$PROJECT_DIR$/images/bg_main1.jpg" />
-      <change type="MOVED" beforePath="E:\ANDROID\co.git\res\drawable\bg_main2.jpg" afterPath="$PROJECT_DIR$/images/bg_main2.jpg" />
     </list>
     <ignored path="Cities Online.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,7 +122,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java" line="192" class="com.hlaway.co.CoActivity" package="com.hlaway.co">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/hlaway/co/util/UserUtil.java" line="128" class="com.hlaway.co.util.UserUtil" package="com.hlaway.co.util">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -160,30 +148,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="game.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/game.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="55" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.59130436" vertical-offset="714" max-vertical-offset="1564">
+            <state line="48" column="51" selection-start="2802" selection-end="2802" vertical-scroll-proportion="-9.52" vertical-offset="578" max-vertical-offset="1564">
               <folding>
                 <element signature="e#1680#1708#0" expanded="true" />
-                <element signature="e#2782#2811#0" expanded="true" />
-                <element signature="e#4093#4116#0" expanded="true" />
-                <element signature="e#4629#4647#0" expanded="true" />
+                <element signature="e#4084#4107#0" expanded="true" />
+                <element signature="e#4620#4638#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authorization.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/authorization.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="db_connect.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webserver/db_connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="389" selection-end="389" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="986">
+            <state line="9" column="21" selection-start="189" selection-end="189" vertical-scroll-proportion="0.28544775" vertical-offset="0" max-vertical-offset="536">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webserver/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="54" selection-start="420" selection-end="420" vertical-scroll-proportion="-1.6538461" vertical-offset="195" max-vertical-offset="731">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/NetworkUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="50" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -192,45 +194,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="37" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="918">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_city_item.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/list_city_item.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="46" selection-start="158" selection-end="198" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="408">
-              <folding>
-                <element signature="e#754#788#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_user_item.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/list_user_item.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="459">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start_game.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/start_game.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="42" column="21" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1598">
+            <state line="34" column="18" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -239,25 +203,36 @@
       <file leaf-file-name="CoActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="59" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="3162">
+            <state line="139" column="32" selection-start="4989" selection-end="4989" vertical-scroll-proportion="-6.12" vertical-offset="2159" max-vertical-offset="3808">
               <folding>
-                <element signature="e#1470#1510#0" expanded="true" />
-                <element signature="e#3360#3400#0" expanded="true" />
-                <element signature="e#5719#5758#0" expanded="true" />
-                <element signature="e#5915#5970#0" expanded="true" />
-                <element signature="e#6302#6353#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1508#1548#0" expanded="true" />
+                <element signature="e#3536#3576#0" expanded="true" />
+                <element signature="e#6173#6212#0" expanded="true" />
+                <element signature="e#6429#6500#0" expanded="true" />
+                <element signature="e#6832#6883#0" expanded="true" />
+                <element signature="e#7094#7115#0" expanded="true" />
+                <element signature="e#7615#7636#0" expanded="true" />
+                <element signature="e#8083#8372#0" expanded="true" />
+                <element signature="e#8361#8362#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="launcher.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/launcher.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
+      <file leaf-file-name="LauncherActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/LauncherActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="34" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="833">
+              <folding />
+            </state>
           </provider>
-          <provider editor-type-id="text-editor">
-            <state line="18" column="43" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="697">
+        </entry>
+      </file>
+      <file leaf-file-name="GameUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="43" selection-start="2457" selection-end="2478" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1938">
               <folding />
             </state>
           </provider>
@@ -266,7 +241,7 @@
       <file leaf-file-name="GameCity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="23" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="901">
+            <state line="51" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1020">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -287,9 +262,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hlaway/co/util/NetworkUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/db/DBHelper.java" />
-        <option value="$PROJECT_DIR$/webserver/index.php" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/domain/User.java" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/util/UserUtil.java" />
@@ -313,14 +286,17 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/domain/Game.java" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/util/CityUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hlaway/co/domain/City.java" />
-        <option value="$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java" />
         <option value="$PROJECT_DIR$/res/layout/list_city_item.xml" />
         <option value="$PROJECT_DIR$/res/layout/list_user_item.xml" />
+        <option value="$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java" />
+        <option value="$PROJECT_DIR$/webserver/db_connect.php" />
+        <option value="$PROJECT_DIR$/src/com/hlaway/co/util/NetworkUtil.java" />
+        <option value="$PROJECT_DIR$/webserver/index.php" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/game.xml" />
+        <option value="$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java" />
+        <option value="$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java" />
       </list>
     </option>
   </component>
@@ -378,8 +354,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -395,6 +369,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="co.git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cities Online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="co.git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,6 +505,10 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -549,27 +541,11 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cities Online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="co.git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,10 +597,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Android">
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -643,6 +615,10 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -701,9 +677,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -723,6 +696,28 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -758,25 +753,6 @@
       <option name="screenWidth" value="0" />
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Android" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -864,7 +840,15 @@
       <created>1391037641625</created>
       <updated>1391037641625</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="improve lists">
+      <created>1391123390272</created>
+      <updated>1391123390272</updated>
+    </task>
+    <task id="LOCAL-00010" summary="transfer db to other server">
+      <created>1391352264445</created>
+      <updated>1391352264445</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -877,7 +861,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67064846" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24175824" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35164836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -888,7 +871,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3877551" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34536892" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.043956045" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -901,6 +884,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24175824" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -923,7 +907,9 @@
     <MESSAGE value="change ignored list" />
     <MESSAGE value="change ignored list&#10;" />
     <MESSAGE value="add GameCity" />
-    <option name="LAST_COMMIT_MESSAGE" value="add GameCity" />
+    <MESSAGE value="improve lists" />
+    <MESSAGE value="transfer db to other server" />
+    <option name="LAST_COMMIT_MESSAGE" value="transfer db to other server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -933,26 +919,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="731" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webserver/cities_count.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea13/system/compile-server/cities online_bd8d0409/targets/java-production/co/android/generated_sources/aapt/com/hlaway/co/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="32" selection-start="7123" selection-end="7123" vertical-scroll-proportion="0.0" vertical-offset="2293" max-vertical-offset="10081" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/bg_main2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -975,9 +941,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666" />
       </provider>
     </entry>
     <entry file="file://E:/Program Files/Android/android-sdk/extras/google/google_play_services/libproject/google-play-services_lib/res/values/version.xml">
@@ -1010,16 +974,6 @@
         <state line="113" column="41" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.5167959" vertical-offset="1143" max-vertical-offset="1530" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/UserUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="74" selection-start="4903" selection-end="5042" vertical-scroll-proportion="0.5167959" vertical-offset="1789" max-vertical-offset="2176" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/NetworkUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1054" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="29" selection-start="1155" selection-end="1159" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1071">
@@ -1032,11 +986,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/LauncherActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="50" selection-start="1162" selection-end="1272" vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="833" />
-      </provider>
-    </entry>
     <entry file="jar://E:/Program Files/Android/android-sdk/platforms/android-10/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="19" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="710" max-vertical-offset="5287" />
@@ -1045,13 +994,6 @@
     <entry file="jar://E:/Program Files/Android/android-sdk/extras/android/support/v4/android-support-v4.jar!/android/support/v4/app/FragmentActivity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="16" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.3324937" vertical-offset="361" max-vertical-offset="2125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="867">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/AuthorizationActivity.java">
@@ -1099,9 +1041,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="46" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="22066">
-          <folding />
-        </state>
+        <state line="27" column="46" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="22066" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/domain/Game.java">
@@ -1113,9 +1053,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="15" selection-start="297" selection-end="297" vertical-scroll-proportion="0.6880734" vertical-offset="108" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="24" column="15" selection-start="297" selection-end="297" vertical-scroll-proportion="0.6880734" vertical-offset="108" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/StartGameActivity.java">
@@ -1127,21 +1065,12 @@
     </entry>
     <entry file="jar://E:/Program Files/Android/android-sdk/platforms/android-10/android.jar!/java/lang/Integer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="35" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.33175355" vertical-offset="761" max-vertical-offset="1496">
-          <folding />
-        </state>
+        <state line="54" column="35" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.33175355" vertical-offset="761" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/CityUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="118" column="23" selection-start="3793" selection-end="3793" vertical-scroll-proportion="0.0" vertical-offset="1555" max-vertical-offset="2737">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.0" vertical-offset="788" max-vertical-offset="1802">
           <folding />
         </state>
       </provider>
@@ -1175,38 +1104,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="37" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/star.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="901">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="59" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="3162">
-          <folding>
-            <element signature="e#1470#1510#0" expanded="true" />
-            <element signature="e#3360#3400#0" expanded="true" />
-            <element signature="e#5719#5758#0" expanded="true" />
-            <element signature="e#5915#5970#0" expanded="true" />
-            <element signature="e#6302#6353#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/list_city_item.xml">
@@ -1214,10 +1114,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="46" selection-start="158" selection-end="198" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="408">
-          <folding>
-            <element signature="e#754#788#0" expanded="true" />
-          </folding>
+        <state line="2" column="46" selection-start="158" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="408">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,7 +1124,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="459">
+        <state line="3" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
@@ -1241,7 +1139,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="389" selection-end="389" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="986">
+        <state line="8" column="44" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="986">
           <folding />
         </state>
       </provider>
@@ -1256,18 +1154,114 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/UserUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="0" selection-start="4904" selection-end="4904" vertical-scroll-proportion="0.0" vertical-offset="1586" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="13" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/GameUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="43" selection-start="2457" selection-end="2478" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/util/NetworkUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="50" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/create_game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="54" selection-start="420" selection-end="420" vertical-scroll-proportion="-1.6538461" vertical-offset="195" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="18" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/game.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="55" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.59130436" vertical-offset="714" max-vertical-offset="1564">
+        <state line="48" column="51" selection-start="2802" selection-end="2802" vertical-scroll-proportion="-9.52" vertical-offset="578" max-vertical-offset="1564">
           <folding>
             <element signature="e#1680#1708#0" expanded="true" />
-            <element signature="e#2782#2811#0" expanded="true" />
-            <element signature="e#4093#4116#0" expanded="true" />
-            <element signature="e#4629#4647#0" expanded="true" />
+            <element signature="e#4084#4107#0" expanded="true" />
+            <element signature="e#4620#4638#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/LauncherActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="34" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/google-play-services_lib/libs/google-play-services.jar!/com/google/android/gms/maps/model/Marker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="11" selection-start="270" selection-end="270" vertical-scroll-proportion="0.25325885" vertical-offset="0" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/domain/GameCity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1020">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hlaway/co/CoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="32" selection-start="4989" selection-end="4989" vertical-scroll-proportion="-6.12" vertical-offset="2159" max-vertical-offset="3808">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1508#1548#0" expanded="true" />
+            <element signature="e#3536#3576#0" expanded="true" />
+            <element signature="e#6173#6212#0" expanded="true" />
+            <element signature="e#6429#6500#0" expanded="true" />
+            <element signature="e#6832#6883#0" expanded="true" />
+            <element signature="e#7094#7115#0" expanded="true" />
+            <element signature="e#7615#7636#0" expanded="true" />
+            <element signature="e#8083#8372#0" expanded="true" />
+            <element signature="e#8361#8362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webserver/db_connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="189" selection-end="189" vertical-scroll-proportion="0.28544775" vertical-offset="0" max-vertical-offset="536">
+          <folding />
         </state>
       </provider>
     </entry>

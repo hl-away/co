@@ -32,12 +32,12 @@
     <string name="label_players">Количество игроков</string>
     <string name="label_score">Очки:</string>
     <string name="current_game.users">Игроки:</string>
-    <string name="current_game.cities">Города:</string>
+    <string name="current_game.cities">Города (%1$s):</string>
     <string name="add_city">Добавить город</string>
     <string name="hint_add_city">Название города</string>
     <string name="hint_write_city_name">Необходимо ввести название города</string>
     <string name="hint_city_not_exist">Извините, но города %1$s не существует</string>
-    <string name="hint_already_called">Извините, но город %1$s уже назывался</string>
+    <string name="hint_already_called">Извините, но город %1$s уже назывался (ход №%2$S)</string>
     <string name="hint_city_added">Город %1$s успешно добавлен</string>
     <string name="hint_load_users_count">Загрузка количества пользователей</string>
     <string name="hint_connect_to_server">Подключение к серверу</string>
