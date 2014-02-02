@@ -11,9 +11,12 @@ import com.hlaway.co.domain.City;
 import com.hlaway.co.domain.Country;
 import com.hlaway.co.domain.GameCity;
 import com.hlaway.co.network.HttpClient;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
@@ -25,6 +28,8 @@ import java.util.Random;
 public class CityUtil {
     public static final String CITY_NAME = "city_name";
     public static final String CITY_ID = "city_id";
+    public static final String COUNTRY_NAME = "country_name";
+    public static final String COUNTRY_CODE = "country_code";
     public static final String LATITUDE = "latitude";
     public static final String LONGITUDE = "longitude";
     private static Context ctx;
@@ -99,11 +104,14 @@ public class CityUtil {
 
     public static void saveCityInServer(City city) {
         HttpClient httpClient = new HttpClient();
-        StringBuilder params = new StringBuilder();
-        params.append("?").append(CITY_NAME).append("=").append(city.getName());
-        params.append("&").append(LATITUDE).append("=").append(city.getLatitude());
-        params.append("&").append(LONGITUDE).append("=").append(city.getLongitude());
-        httpClient.execute(getSetCityUrl() + params.toString());
+        List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+        parameters.add(new BasicNameValuePair(CITY_NAME, city.getName()));
+        parameters.add(new BasicNameValuePair(LATITUDE, String.valueOf(city.getLatitude())));
+        parameters.add(new BasicNameValuePair(LONGITUDE, String.valueOf(city.getLongitude())));
+        parameters.add(new BasicNameValuePair(COUNTRY_NAME, city.getCountry().getName()));
+        parameters.add(new BasicNameValuePair(COUNTRY_CODE, city.getCountry().getCode()));
+        httpClient.setParameters(parameters);
+        httpClient.execute(getSetCityUrl());
     }
 
     public static City initCity(String cityName) {
