@@ -1,9 +1,9 @@
 package com.hlaway.co.domain;
 
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.hlaway.co.R;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -51,7 +51,8 @@ public class GameCity extends City {
     }
 
     public Map<String, Object> getViewMap() {
-        Map<String, Object> parametersMap = super.getViewMap();
+        Map<String, Object> parametersMap = new HashMap<String, Object>();
+        parametersMap.put( COLUMN_NAME, getName());
         int icon = R.drawable.t;
         if(newCity) {
             icon = R.drawable.star;

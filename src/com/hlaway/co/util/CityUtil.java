@@ -5,10 +5,10 @@ import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import com.google.android.gms.maps.model.LatLng;
 import com.hlaway.co.CoActivity;
 import com.hlaway.co.db.DatabaseManager;
 import com.hlaway.co.domain.City;
+import com.hlaway.co.domain.Country;
 import com.hlaway.co.domain.GameCity;
 import com.hlaway.co.network.HttpClient;
 
@@ -48,25 +48,6 @@ public class CityUtil {
         locationB.setLatitude(c2.getPosition().latitude);
         locationB.setLongitude(c2.getPosition().longitude);
         return (int) locationA.distanceTo(locationB)/1000;
-    }
-
-    public static City getCity(String cityName) {
-        cityName = StringUtil.normCityName(cityName);
-        City city = getCityFromDB(cityName);
-        if(isEmpty(city)) {
-            //getCityFromServer(cityName);
-            if (city == null) {
-                return null;
-            }
-
-            if(city.getLatitude() == 0 && city.getLongitude() == 0) {
-                city = initCity(cityName);
-                saveCityInServer(city);
-            }
-
-            saveCityInDB(city);
-        }
-        return city;
     }
 
     public static City getCityFromDB(String cityName) {
@@ -126,24 +107,25 @@ public class CityUtil {
     }
 
     public static City initCity(String cityName) {
-        return new City(cityName, getCityPositionFromGeocoder(cityName));
+        City city = new City(cityName);
+        initCityFromGeocoder(city);
+        return city;
     }
 
-    private static LatLng getCityPositionFromGeocoder(String cityName) {
+    private static void initCityFromGeocoder(City city) {
         Geocoder geocoder = new Geocoder(ctx, Locale.getDefault());
         List<Address> addresses = null;
         try {
-            addresses = geocoder.getFromLocationName(cityName, 1);
+            addresses = geocoder.getFromLocationName(city.getName(), 1);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        double latitude = 0;
-        double longitude = 0;
         if(addresses != null && addresses.size() > 0) {
-            latitude = addresses.get(0).getLatitude();
-            longitude = addresses.get(0).getLongitude();
+            Address address = addresses.get(0);
+            city.setLatitude(address.getLatitude());
+            city.setLongitude(address.getLongitude());
+            city.setCountry(new Country(address.getCountryName(), address.getCountryCode()));
         }
-        return new LatLng(latitude, longitude);
     }
 
     public static City getRandomCity(Context context) {

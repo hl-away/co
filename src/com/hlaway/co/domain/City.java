@@ -4,9 +4,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * User: hl-away
  * Date: 19.10.13
@@ -23,6 +20,7 @@ public class City {
     private double longitude = 0;
     @DatabaseField()
     private double serverID = 0;
+    private Country country;
 
     public static final String COLUMN_NAME = "name";
 
@@ -84,13 +82,11 @@ public class City {
         this.serverID = serverID;
     }
 
-    public Map<String, Object> getViewMap() {
-        Map<String, Object> parametersMap = new HashMap<String, Object>();
-        parametersMap.put( COLUMN_NAME, name);
-        return parametersMap;
+    public Country getCountry() {
+        return country;
     }
 
-    public static String[] getParametersList() {
-        return new String[]{ COLUMN_NAME };
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }
