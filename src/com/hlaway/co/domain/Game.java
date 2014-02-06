@@ -1,8 +1,5 @@
 package com.hlaway.co.domain;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,11 +7,11 @@ import java.util.List;
  * User: hl-away
  * Date: 27.10.13
  */
-public class Game implements Parcelable {
+public class Game {
     private long id;
     private ArrayList<User> users;
     private ArrayList<GameCity> cities;
-    private int newCitiesCount;
+    private long lastStep = 0;
 
     public Game() {
         users = new ArrayList<User>();
@@ -60,26 +57,11 @@ public class Game implements Parcelable {
         return null;
     }
 
-    public int getNewCitiesCount() {
-        return newCitiesCount;
+    public long getLastStep() {
+        return lastStep;
     }
 
-    public void setNewCitiesCount(int newCitiesCount) {
-        this.newCitiesCount = newCitiesCount;
-    }
-
-    public void incrementNewCitiesCount() {
-        newCitiesCount++;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        /*parcel.writeString(color);
-        parcel.writeString(number);*/
+    public void setLastStep(long lastStep) {
+        this.lastStep = lastStep;
     }
 }

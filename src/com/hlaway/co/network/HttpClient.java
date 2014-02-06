@@ -8,6 +8,7 @@ import com.hlaway.co.CoActivity;
 import com.hlaway.co.StartGameActivity;
 import com.hlaway.co.util.NetworkUtil;
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +77,10 @@ public class HttpClient extends AsyncTask<String, Void, String> {
 
     public void setRequestOnlineData(boolean requestOnlineData) {
         this.requestOnlineData = requestOnlineData;
+    }
+
+    public void addParameter(String key, Object value) {
+        parameters.add(new BasicNameValuePair(key, String.valueOf(value)));
     }
 
     protected String doInBackground(String... urls) {

@@ -28,6 +28,7 @@ import java.util.Random;
 public class CityUtil {
     public static final String CITY_NAME = "city_name";
     public static final String CITY_ID = "city_id";
+    public static final String NEW_CITY = "new_city";
     public static final String COUNTRY_NAME = "country_name";
     public static final String COUNTRY_CODE = "country_code";
     public static final String LATITUDE = "latitude";

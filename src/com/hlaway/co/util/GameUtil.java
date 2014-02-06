@@ -5,6 +5,11 @@ import com.hlaway.co.CoActivity;
 import com.hlaway.co.StartGameActivity;
 import com.hlaway.co.domain.*;
 import com.hlaway.co.network.HttpClient;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: hl-away
@@ -77,12 +82,13 @@ public class GameUtil {
         return -1;
     }
 
-    public static void addCityToGame(City city, Game game, User user) {
+    public static void addCityToGame(GameCity city, Game game, User user) {
         HttpClient httpClient = new HttpClient();
-        String url = StringUtil.addParamToURL(getAddCityToGameUrl(), UserUtil.USER_TOKEN, user.getToken());
-        url = StringUtil.addParamToURL(url, GameUtil.GAME_ID, game.getId());
-        url = StringUtil.addParamToURL(url, CityUtil.CITY_ID, city.getServerID());
-        httpClient.execute(url);
+        httpClient.addParameter(UserUtil.USER_TOKEN, user.getToken());
+        httpClient.addParameter(GameUtil.GAME_ID, game.getId());
+        httpClient.addParameter(CityUtil.CITY_ID, city.getServerID());
+        httpClient.addParameter(CityUtil.NEW_CITY, city.isNewCity());
+        httpClient.execute(getAddCityToGameUrl());
     }
 
     public static void requestOnlineData(StartGameActivity startGameActivity, String message) {

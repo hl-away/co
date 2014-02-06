@@ -41,13 +41,20 @@ public class CoActivity extends MainActivity {
         initUser(savedInstanceState);
         GameUtil.requestGame(this, getString(R.string.hint_connect_to_game), user);
 
-        map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
-        map.animateCamera( CameraUpdateFactory.zoomTo( 3.0f ) );
+        initLayout();
+        addListenerOnButton();
+    }
+
+    private void initLayout() {
         cityNameEdit = (EditText) findViewById(R.id.cityName);
         gameCitiesTitle = (TextView) findViewById(R.id.gameCitiesTitle);
         addCityButton = (Button) findViewById(R.id.addMap);
+        initMap();
+    }
 
-        addListenerOnButton();
+    private void initMap() {
+        map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        map.animateCamera( CameraUpdateFactory.zoomTo( 3.0f ) );
     }
 
     private void initUser(Bundle savedInstanceState) {
@@ -69,12 +76,6 @@ public class CoActivity extends MainActivity {
             showAllGameCities();
             showUsers();
         }
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        //outState.putParcelable("game", game);
     }
 
     public void addListenerOnButton() {
