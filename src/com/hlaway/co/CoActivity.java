@@ -38,11 +38,6 @@ public class CoActivity extends MainActivity {
         DatabaseManager.init(this);
         CityUtil.setCtx(this);
 
-/*
-        *//*if(user != null) {
-            UserUtil.requestUserToken(this, getString(R.string.hint_connect_to_server), user);
-        } else {
-        }*/
         initUser(savedInstanceState);
         GameUtil.requestGame(this, getString(R.string.hint_connect_to_game), user);
 
