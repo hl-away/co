@@ -71,10 +71,9 @@ public class CoActivity extends MainActivity {
     public void initGame(String result) {
         if( StringUtil.notEmpty(result) ) {
             game = GameUtil.parseGameFromStr(result);
-            showGameCities();
+            showAllGameCities();
             showUsers();
         }
-        //UserUtil.requestUsersCount(this, getString(R.string.hint_load_users_count), (TextView) findViewById(R.id.usersCount));
     }
 
     @Override
@@ -106,24 +105,29 @@ public class CoActivity extends MainActivity {
         CityUtil.getCityFromServer(cityName, this);
     }
 
-    private void showGameCities() {
-        for(int i = 0; i < game.getCities().size(); i++) {
-            showCity(i);
+    private void showAllGameCities() {
+        for(int i = 0; i < game.getCities().size()-1; i++) {
+            showCity(i, false);
         }
+        showLastCity();
     }
 
     private void showLastCity() {
         showCity(game.getCities().size() - 1);
     }
 
-    private void showCity(int currentCityId) {
-        GameCity currentCity = game.getCities().get(currentCityId);
+    private void showCity(int cityId) {
+        showCity(cityId, true);
+    }
+
+    private void showCity(int cityId, boolean showMarker) {
+        GameCity currentCity = game.getCities().get(cityId);
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(currentCity.getPosition())
                 .title(currentCity.getName());
 
-        if(currentCityId > 0) {
-            City previousCity = game.getCities().get(currentCityId - 1);
+        if(cityId > 0) {
+            City previousCity = game.getCities().get(cityId - 1);
             map.addPolyline(new PolylineOptions()
                     .add(currentCity.getPosition(), previousCity.getPosition())
                     .width(2)
@@ -136,12 +140,14 @@ public class CoActivity extends MainActivity {
         Marker marker = map.addMarker(markerOptions);
         marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.pin));
         currentCity.setMarker(marker);
-        showCityOnMap(currentCity);
+        if(showMarker) {
+            showCityOnMap(currentCity);
+        }
         //marker.setAlpha(0.8f);
 
         cityNameEdit.setText(StringUtil.getLastLetter(currentCity.getName()).toUpperCase());
         gameCitiesTitle.setText(getString(R.string.current_game_cities, game.getCities().size()));
-        showCities();
+        showCitiesTable();
     }
 
     private void showCityOnMap(GameCity city) {
@@ -200,7 +206,7 @@ public class CoActivity extends MainActivity {
         lv.setClickable(false);
     }
 
-    private void showCities() {
+    private void showCitiesTable() {
         ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
         for (GameCity city: game.getCities()) {
             data.add(city.getViewMap());
