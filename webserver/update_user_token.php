@@ -7,5 +7,4 @@ if(strlen("$user_token") > 0) {
 } else if($user_id != 0) {
     mysql_query("UPDATE USER_TOKEN SET LAST_REQUEST = '$time_str' WHERE USER_ID = $user_id");
 }
-include_once "clear_tokens.php"; 
-?>
+include_once "clear_tokens.php";

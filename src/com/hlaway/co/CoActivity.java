@@ -13,13 +13,11 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.hlaway.co.db.DatabaseManager;
-import com.hlaway.co.domain.City;
-import com.hlaway.co.domain.Game;
-import com.hlaway.co.domain.GameCity;
-import com.hlaway.co.domain.User;
+import com.hlaway.co.domain.*;
 import com.hlaway.co.util.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class CoActivity extends MainActivity {
@@ -101,6 +99,10 @@ public class CoActivity extends MainActivity {
         CityUtil.getCityFromServer(cityName, this);
     }
 
+    public void initGameSteps(String result) {
+        List<GameStep> gameSteps = GameUtil.parseSteps(result);
+    }
+
     private void showAllGameCities() {
         for(int i = 0; i < game.getCities().size()-1; i++) {
             showCity(i, false);
@@ -152,7 +154,7 @@ public class CoActivity extends MainActivity {
         city.getMarker().showInfoWindow();
     }
 
-    public void setCityFromServer(String cityStr) {
+    public void initCityFromServer(String cityStr) {
         GameCity gameCity = CityUtil.parseCityFromStr(cityStr);
         if (gameCity != null) {
             if(gameCity.getLatitude() == 0 && gameCity.getLongitude() == 0) {

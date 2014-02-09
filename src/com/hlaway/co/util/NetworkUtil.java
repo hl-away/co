@@ -29,6 +29,8 @@ public class NetworkUtil {
     public static final String ERROR = "ERROR=";
     public static final String SEPARATOR = "\\|";
     public static final String SEPARATOR_DATA = "\\&";
+    public static final String SEPARATOR_DATA_VALUE = "\\:";
+    public static final String SEPARATOR_DATA_FIELD = "\\#";
 
     public static String buildUrl(String pageName) {
         return SITE_URL + pageName;

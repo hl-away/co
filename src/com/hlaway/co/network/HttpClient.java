@@ -24,12 +24,14 @@ public class HttpClient extends AsyncTask<String, Void, String> {
     private AuthorizationActivity authorizationActivity;
     private StartGameActivity startGameActivity;
     private List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+    private long sleepTime = 0;
     private boolean requestCity = false;
     private boolean requestUserToken = false;
     private boolean requestUserData = false;
     private boolean requestGame = false;
     private boolean doLoginOrRegistration = false;
     private boolean requestOnlineData = false;
+    private boolean requestGameSteps = false;
 
     public void setTextView(TextView textView) {
         this.textView = textView;
@@ -79,11 +81,20 @@ public class HttpClient extends AsyncTask<String, Void, String> {
         this.requestOnlineData = requestOnlineData;
     }
 
+    public void setRequestGameSteps(boolean requestGameSteps) {
+        this.requestGameSteps = requestGameSteps;
+    }
+
     public void addParameter(String key, Object value) {
         parameters.add(new BasicNameValuePair(key, String.valueOf(value)));
     }
 
     protected String doInBackground(String... urls) {
+        if(sleepTime > 0) {
+            try {
+                Thread.sleep(sleepTime);
+            } catch (InterruptedException ignored) {}
+        }
         return NetworkUtil.getUrl(urls[0], parameters);
     }
 
@@ -97,8 +108,10 @@ public class HttpClient extends AsyncTask<String, Void, String> {
         }
 
         if(coActivity != null) {
-            if(requestCity) {
-                coActivity.setCityFromServer(result);
+            if(requestGameSteps) {
+                coActivity.initGameSteps(result);
+            } else if(requestCity) {
+                coActivity.initCityFromServer(result);
             } else if(requestGame) {
                 coActivity.initGame(result);
             }

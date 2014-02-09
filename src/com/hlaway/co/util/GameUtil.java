@@ -5,8 +5,6 @@ import com.hlaway.co.CoActivity;
 import com.hlaway.co.StartGameActivity;
 import com.hlaway.co.domain.*;
 import com.hlaway.co.network.HttpClient;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +15,7 @@ import java.util.List;
  */
 public class GameUtil {
     public static final String GAME_ID = "game_id";
+    public static final String LAST_STEP = "last_step";
 
     public static String getGameRequestUrl() {
         return NetworkUtil.buildUrl("get_game.php");
@@ -28,6 +27,10 @@ public class GameUtil {
 
     public static String getOnlineDataUrl() {
         return NetworkUtil.buildUrl("get_online_data.php");
+    }
+
+    public static String getGameStepsUrl() {
+        return NetworkUtil.buildUrl("get_game_steps.php");
     }
 
     public static void requestGame(CoActivity coActivity, String message, User user) {
@@ -110,5 +113,42 @@ public class GameUtil {
             }
         }
         return null;
+    }
+
+    public static void requestGameSteps(CoActivity coActivity, Game game, User user) {
+        HttpClient httpClient = new HttpClient();
+        httpClient.setCoActivity(coActivity);
+        httpClient.setRequestGameSteps(true);
+        httpClient.addParameter(UserUtil.USER_TOKEN, user.getToken());
+        httpClient.addParameter(GAME_ID, game.getId());
+        httpClient.addParameter(LAST_STEP, game.getLastStep());
+        httpClient.execute(getGameStepsUrl());
+    }
+
+    public static List<GameStep> parseSteps(String result) {
+        List<GameStep> gameSteps = new ArrayList<GameStep>();
+        if(StringUtil.notEmpty(result)) {
+            String[] steps = result.split(NetworkUtil.SEPARATOR);
+            for(String step: steps) {
+                GameStep gameStep = new GameStep();
+                String[] data_m = step.split(NetworkUtil.SEPARATOR_DATA);
+                for(String data: data_m) {
+                    String[] values = data.split(NetworkUtil.SEPARATOR_DATA_VALUE);
+                    String key = values[0];
+                    String value = values[1];
+                    if("s".equals(key)) {
+                        gameStep.setStep(Long.valueOf(value));
+                    } else if("t".equals(key)) {
+                        gameStep.setType(value);
+                    } else if("u".equals(key)) {
+                        gameStep.setUserId(Long.valueOf(value));
+                    } else if("o".equals(key)) {
+                        gameStep.setValue(value);
+                    }
+                }
+                gameSteps.add(gameStep);
+            }
+        }
+        return gameSteps;
     }
 }
