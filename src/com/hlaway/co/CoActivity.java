@@ -13,11 +13,16 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.hlaway.co.db.DatabaseManager;
-import com.hlaway.co.domain.*;
-import com.hlaway.co.util.*;
+import com.hlaway.co.domain.City;
+import com.hlaway.co.domain.Game;
+import com.hlaway.co.domain.GameCity;
+import com.hlaway.co.domain.User;
+import com.hlaway.co.util.CityUtil;
+import com.hlaway.co.util.GameUtil;
+import com.hlaway.co.util.StringUtil;
+import com.hlaway.co.util.UserUtil;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class CoActivity extends MainActivity {
@@ -73,6 +78,7 @@ public class CoActivity extends MainActivity {
             game = GameUtil.parseGameFromStr(result);
             showAllGameCities();
             showUsers();
+            GameUtil.requestGameSteps(this, game, user);
         }
     }
 
@@ -100,7 +106,10 @@ public class CoActivity extends MainActivity {
     }
 
     public void initGameSteps(String result) {
-        List<GameStep> gameSteps = GameUtil.parseSteps(result);
+        GameUtil.addStepsToGame(this, GameUtil.parseSteps(result), game);
+        if(!game.isCurrentStep()) {
+            GameUtil.requestGameSteps(this, game, user);
+        }
     }
 
     private void showAllGameCities() {
@@ -110,7 +119,7 @@ public class CoActivity extends MainActivity {
         showLastCity();
     }
 
-    private void showLastCity() {
+    public void showLastCity() {
         showCity(game.getCities().size() - 1);
     }
 
@@ -191,7 +200,7 @@ public class CoActivity extends MainActivity {
         return false;
     }
 
-    private void showUsers() {
+    public void showUsers() {
         ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
         for (User user: game.getUsers()) {
             data.add(user.getViewMap());

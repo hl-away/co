@@ -5,9 +5,9 @@ package com.hlaway.co.domain;
  * Date: 06.02.14
  */
 public class GameStep {
-    public static String TYPE_ADD_CITY = "add_city";
-    public static String TYPE_ADD_NEW_CITY = "add_new_city";
-    public static String TYPE_CONNECT_USER = "connect_user";
+    public static final String TYPE_ADD_CITY = "add_city";
+    public static final String TYPE_ADD_NEW_CITY = "add_new_city";
+    public static final String TYPE_CONNECT_USER = "connect_user";
 
     private long step;
     private String type;

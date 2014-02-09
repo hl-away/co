@@ -12,6 +12,7 @@ public class Game {
     private ArrayList<User> users;
     private ArrayList<GameCity> cities;
     private long lastStep = 0;
+    private boolean currentStep = false;
 
     public Game() {
         users = new ArrayList<User>();
@@ -63,5 +64,22 @@ public class Game {
 
     public void setLastStep(long lastStep) {
         this.lastStep = lastStep;
+    }
+
+    public boolean isCurrentStep() {
+        return currentStep;
+    }
+
+    public void setCurrentStep(boolean currentStep) {
+        this.currentStep = currentStep;
+    }
+
+    public User getUser(long userId) {
+        for(User user: users) {
+            if(user.getId() == userId) {
+                return user;
+            }
+        }
+        return null;
     }
 }

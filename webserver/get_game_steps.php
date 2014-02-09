@@ -27,14 +27,19 @@ if( strlen($game_id) > 0 && strlen($last_step) > 0) {
             if( $step_type == "add_city" || $step_type == "add_new_city" ) {
                 $r_c = mysql_query("SELECT ID, NAME, LATITUDE, LONGITUDE FROM CITY WHERE ID = $object_id");
                 if( mysql_num_rows($r_c) > 0 ) {
-                    $object_data = "i:" .mysql_result($r_c,0,0) ."#n:" .mysql_result($r_c,0,1)
-                        ."#la:" .mysql_result($r_c,0,2) ."#lo:" .mysql_result($r_c,0,3);
+                    $object_data = "i=" .mysql_result($r_c,0,0) ."#n=" .mysql_result($r_c,0,1)
+                        ."#la=" .mysql_result($r_c,0,2) ."#lo=" .mysql_result($r_c,0,3);
+                }
+            } else if ($step_type == "connect_user") {
+                $r_c = mysql_query("SELECT ID, LOGIN, SCORE FROM USER WHERE ID = $object_id");
+                if( mysql_num_rows($r_c) > 0 ) {
+                    $object_data = "i=" .mysql_result($r_c,0,0) ."#l=" .mysql_result($r_c,0,1) ."#s=" .mysql_result($r_c,0,2);
                 }
             }
             echo "s:" .$step ."&t:" .$step_type ."&u:" .$user_id ."&o:" .$object_data;
         }
     } else {
-        echo "EMPTY";
+        echo "NULL";
     }
 } else {
     echo "ERROR";

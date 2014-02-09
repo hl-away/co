@@ -29,7 +29,11 @@ if($user_id > 0) {
             mysql_query("INSERT INTO GAME (MAX_USERS) VALUES(5)");
             $game_id = mysql_insert_id();
             //add current user to game
-            mysql_query("INSERT INTO GAME_USER (GAME_ID, USER_ID) VALUES($game_id, $user_id)");
+            //mysql_query("INSERT INTO GAME_USER (GAME_ID, USER_ID) VALUES($game_id, $user_id)");
+            $r = mysql_query("SELECT COUNT(*) FROM GAME_STEP WHERE GAME_ID = $game_id");
+            $step_str = mysql_result($r,0,0);
+            $step = 1 + ((int) $step_str );
+            mysql_query("INSERT INTO GAME_STEP (GAME_ID, USER_ID, STEP, STEP_TYPE, OBJECT_ID) VALUES($game_id, $user_id, $step, 'connect_user', $user_id)");
             //add first city to game
             $r = mysql_query("SELECT ID FROM CITY WHERE LATITUDE <> 0 AND LONGITUDE <> 0");
             $first_city_id = mysql_result($r, rand(1, mysql_num_rows($r)),0);

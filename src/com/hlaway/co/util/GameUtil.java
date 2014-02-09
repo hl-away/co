@@ -2,6 +2,7 @@ package com.hlaway.co.util;
 
 import android.app.ProgressDialog;
 import com.hlaway.co.CoActivity;
+import com.hlaway.co.R;
 import com.hlaway.co.StartGameActivity;
 import com.hlaway.co.domain.*;
 import com.hlaway.co.network.HttpClient;
@@ -131,8 +132,8 @@ public class GameUtil {
             String[] steps = result.split(NetworkUtil.SEPARATOR);
             for(String step: steps) {
                 GameStep gameStep = new GameStep();
-                String[] data_m = step.split(NetworkUtil.SEPARATOR_DATA);
-                for(String data: data_m) {
+                String[] data_mass = step.split(NetworkUtil.SEPARATOR_DATA);
+                for(String data: data_mass) {
                     String[] values = data.split(NetworkUtil.SEPARATOR_DATA_VALUE);
                     String key = values[0];
                     String value = values[1];
@@ -150,5 +151,78 @@ public class GameUtil {
             }
         }
         return gameSteps;
+    }
+
+    public static void addStepsToGame(CoActivity coActivity, List<GameStep> gameSteps, Game game) {
+        for(GameStep gameStep: gameSteps) {
+            addStepToGame(coActivity, gameStep, game);
+        }
+    }
+
+    private static void addStepToGame(CoActivity coActivity, GameStep gameStep, Game game) {
+        String message = "";
+        String type = gameStep.getType();
+        String value = gameStep.getValue();
+        User user = game.getUser(gameStep.getUserId());
+        if (GameStep.TYPE_ADD_CITY.equals(type) || GameStep.TYPE_ADD_NEW_CITY.equals(type)) {
+            GameCity gameCity = initGameCity(value);
+            if (GameStep.TYPE_ADD_NEW_CITY.equals(type)) {
+                gameCity.setNewCity(true);
+            }
+            game.addCity(gameCity);
+            coActivity.showLastCity();
+            if(user != null) {
+                message = coActivity.getString(R.string.game_hint_add_city, user.getLogin(), gameCity.getName());
+            }
+        } else if(GameStep.TYPE_CONNECT_USER.equals(type)) {
+            user = initUser(value);
+            game.addUser(user);
+            if(user != null) {
+                message = coActivity.getString(R.string.game_hint_connect_user, user.getLogin());
+            }
+            coActivity.showUsers();
+        }
+        game.setLastStep(gameStep.getStep());
+        if(StringUtil.notEmpty(message)) {
+            coActivity.printShortMessage(message);
+        }
+    }
+
+    private static GameCity initGameCity(String objectData) {
+        GameCity gameCity = new GameCity();
+        String[] fields = objectData.split(NetworkUtil.SEPARATOR_DATA_VALUE_FIELD);
+        for(String field: fields) {
+            String[] values = field.split(NetworkUtil.SEPARATOR_DATA_VALUE_FIELD_VALUE);
+            String key = values[0];
+            String value = values[1];
+            if("i".equals(key)) {
+                gameCity.setId(Long.valueOf(value));
+            } else if("n".equals(key)) {
+                gameCity.setName(value);
+            } else if("la".equals(key)) {
+                gameCity.setLatitude(Double.valueOf(value));
+            } else if("lo".equals(key)) {
+                gameCity.setLongitude(Double.valueOf(value));
+            }
+        }
+        return gameCity;
+    }
+
+    private static User initUser(String objectData) {
+        User user = new User();
+        String[] fields = objectData.split(NetworkUtil.SEPARATOR_DATA_VALUE_FIELD);
+        for(String field: fields) {
+            String[] values = field.split(NetworkUtil.SEPARATOR_DATA_VALUE_FIELD_VALUE);
+            String key = values[0];
+            String value = values[1];
+            if("i".equals(key)) {
+                user.setId(Long.valueOf(value));
+            } else if("l".equals(key)) {
+                user.setLogin(value);
+            } else if("s".equals(key)) {
+                user.setScore(Long.valueOf(value));
+            }
+        }
+        return user;
     }
 }

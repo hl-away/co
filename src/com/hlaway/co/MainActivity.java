@@ -17,7 +17,14 @@ public class MainActivity extends FragmentActivity {
     }
 
     protected void printMessage(String message) {
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+        printMessage(message, Toast.LENGTH_LONG);
+    }
+     public void printShortMessage(String message) {
+        printMessage(message, Toast.LENGTH_SHORT);
+    }
+
+    protected void printMessage(String message, int length) {
+        Toast.makeText(getApplicationContext(), message, length).show();
     }
 
     protected void openLauncher() {

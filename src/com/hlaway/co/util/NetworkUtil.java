@@ -30,7 +30,8 @@ public class NetworkUtil {
     public static final String SEPARATOR = "\\|";
     public static final String SEPARATOR_DATA = "\\&";
     public static final String SEPARATOR_DATA_VALUE = "\\:";
-    public static final String SEPARATOR_DATA_FIELD = "\\#";
+    public static final String SEPARATOR_DATA_VALUE_FIELD = "\\#";
+    public static final String SEPARATOR_DATA_VALUE_FIELD_VALUE = "\\=";
 
     public static String buildUrl(String pageName) {
         return SITE_URL + pageName;

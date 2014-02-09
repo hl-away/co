@@ -45,4 +45,7 @@
     <string name="hint_connect_to_game">Подключение к игре</string>
     <string name="hint_request_game_data">Загруза игровых данных</string>
     <string name="list_city_item.city_icon">Star</string>
+
+    <string name="game_hint_add_city">%1$s добавил(a) город %2$s</string>
+    <string name="game_hint_connect_user">%1$s подключлся к игре</string>
 </resources>
