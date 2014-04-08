@@ -47,29 +47,8 @@ public class GameUtil {
     }
 
     public static Game parseGameFromStr(String str) {
-        String[] gameArray = str.split(NetworkUtil.SEPARATOR);
-        if(gameArray.length < 1) {
-            return null;
-        }
         Game game = new Game();
-        game.setId(Long.valueOf(gameArray[0]));
-        for(int i = 1; i < gameArray.length; i++) {
-            String[] valueArray = gameArray[i].split(NetworkUtil.SEPARATOR_DATA);
-            if(valueArray[0].equals("u")) {
-                User user = new User();
-                user.setId(Long.valueOf(valueArray[1]));
-                user.setLogin(valueArray[2]);
-                user.setScore(Long.valueOf(valueArray[3]));
-                game.addUser(user);
-            } else if(valueArray[0].equals("c")) {
-                GameCity city = new GameCity();
-                city.setId(Long.valueOf(valueArray[1]));
-                city.setName(valueArray[2]);
-                city.setLatitude(Double.valueOf(valueArray[3]));
-                city.setLongitude(Double.valueOf(valueArray[4]));
-                game.addCity(city);
-            }
-        }
+        game.setId(Long.valueOf(str));
         return game;
     }
 

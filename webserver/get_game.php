@@ -27,9 +27,9 @@ if ($user_id > 0) {
     }
 
     if ($game_id > 0) {
-        //print game data
-        echo $game_id . "|";
-        $r = mysql_query("SELECT USER.id, USER.login, USER.score FROM GAME_STEP, USER WHERE GAME_STEP.game_id = $game_id AND GAME_STEP.type = 'connect_user' AND GAME_STEP.object_id = USER.id");
+        //print game id
+        echo $game_id;// . "|";
+        /*$r = mysql_query("SELECT USER.id, USER.login, USER.score FROM GAME_STEP, USER WHERE GAME_STEP.game_id = $game_id AND GAME_STEP.type = 'connect_user' AND GAME_STEP.object_id = USER.id");
         for ($i = 0; $row = mysql_fetch_assoc($r); $i++) {
             echo "u&" . $row['ID'] . "&" . $row['LOGIN'] . "&" . $row['SCORE'] . "|";
         }
@@ -37,7 +37,7 @@ if ($user_id > 0) {
         for ($i = 0; $row = mysql_fetch_assoc($r); $i++) {
             if ($i != 0) echo "|";
             echo "c&" . $row['ID'] . "&" . $row['NAME'] . "&" . $row['LATITUDE'] . "&" . $row['LONGITUDE'];
-        }
+        }*/
     } else {
         echo "ERROR";
     }

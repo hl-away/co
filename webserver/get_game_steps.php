@@ -15,10 +15,12 @@ if( strlen($last_step) == 0 ) {
     $last_step = $_GET['last_step'];
 }
 if( strlen($game_id) > 0 && strlen($last_step) > 0) {
-    $r = mysql_query("SELECT * FROM GAME_STEP WHERE GAME_ID = $game_id and STEP > $last_step");
+    $r = mysql_query("SELECT STEP, TYPE, OBJECT_ID, USER_ID FROM GAME_STEP WHERE GAME_ID = $game_id and STEP > $last_step");
     if( mysql_num_rows($r) > 0) {
         for($i = 0; $row = mysql_fetch_assoc($r); $i++) {
-            if($i != 0) echo "|";
+            if($i != 0) {
+                echo "|";
+            }
             $step = $row['STEP'];
             $type = $row['TYPE'];
             $object_id = $row['OBJECT_ID'];

@@ -73,15 +73,6 @@ public class CoActivity extends MainActivity {
         }
     }
 
-    public void initGame(String result) {
-        if( StringUtil.notEmpty(result) ) {
-            game = GameUtil.parseGameFromStr(result);
-            showAllGameCities();
-            showUsers();
-            GameUtil.requestGameSteps(this, game, user);
-        }
-    }
-
     public void addListenerOnButton() {
         addCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +94,15 @@ public class CoActivity extends MainActivity {
 
     private void getCityFromServer(String cityName) {
         CityUtil.getCityFromServer(cityName, this);
+    }
+
+    public void initGame(String result) {
+        if( StringUtil.notEmpty(result) ) {
+            game = GameUtil.parseGameFromStr(result);
+            /*showAllGameCities();
+            showUsers();*/
+            GameUtil.requestGameSteps(this, game, user);
+        }
     }
 
     public void initGameSteps(String result) {
