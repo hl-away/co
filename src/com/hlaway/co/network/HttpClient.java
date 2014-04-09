@@ -85,6 +85,10 @@ public class HttpClient extends AsyncTask<String, Void, String> {
         this.requestGameSteps = requestGameSteps;
     }
 
+    public void setSleepTime(long sleepTime) {
+        this.sleepTime = sleepTime;
+    }
+
     public void addParameter(String key, Object value) {
         parameters.add(new BasicNameValuePair(key, String.valueOf(value)));
     }

@@ -23,7 +23,7 @@ import java.util.List;
  * Date: 18.11.13
  */
 public class NetworkUtil {
-    public static final String SITE_URL = "http://co.heliohost.org/";
+    public static final String SITE_URL = "http://hlaway.0fees.us/";
     public static final String NULL = "NULL";
     public static final String TRUE = "TRUE";
     public static final String ERROR = "ERROR=";

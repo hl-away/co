@@ -102,6 +102,9 @@ public class GameUtil {
         httpClient.addParameter(UserUtil.USER_TOKEN, user.getToken());
         httpClient.addParameter(GAME_ID, game.getId());
         httpClient.addParameter(LAST_STEP, game.getLastStep());
+        if(game.getLastStep() > 0)  {
+            httpClient.setSleepTime(3 * 1000);
+        }
         httpClient.execute(getGameStepsUrl());
     }
 
@@ -133,12 +136,13 @@ public class GameUtil {
     }
 
     public static void addStepsToGame(CoActivity coActivity, List<GameStep> gameSteps, Game game) {
+        boolean showMessage = game.getLastStep() > 1;
         for(GameStep gameStep: gameSteps) {
-            addStepToGame(coActivity, gameStep, game);
+            addStepToGame(coActivity, gameStep, game, showMessage);
         }
     }
 
-    private static void addStepToGame(CoActivity coActivity, GameStep gameStep, Game game) {
+    private static void addStepToGame(CoActivity coActivity, GameStep gameStep, Game game, boolean showMessage) {
         String message = "";
         String type = gameStep.getType();
         String value = gameStep.getValue();
@@ -162,7 +166,7 @@ public class GameUtil {
             coActivity.showUsers();
         }
         game.setLastStep(gameStep.getStep());
-        if(StringUtil.notEmpty(message)) {
+        if(showMessage && StringUtil.notEmpty(message)) {
             coActivity.printShortMessage(message);
         }
     }

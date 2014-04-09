@@ -19,7 +19,7 @@ public class City {
     @DatabaseField()
     private double longitude = 0;
     @DatabaseField()
-    private double serverID = 0;
+    private long serverID = 0;
     private Country country;
 
     public static final String COLUMN_NAME = "name";
@@ -78,7 +78,7 @@ public class City {
         return serverID;
     }
 
-    public void setServerID(double serverID) {
+    public void setServerID(long serverID) {
         this.serverID = serverID;
     }
 
